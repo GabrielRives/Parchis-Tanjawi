@@ -14,13 +14,19 @@ const MyDiceApp = () => {
   };
 
   return (
-    <ReactDice
-      numDice={1}
-      ref={reactDice}
-      rollDone={rollDone}
-      dotColor="black"
-      faceColor="white"
-    />
+    <div className="dice">
+      <ReactDice
+        numDice={1}
+        ref={reactDice}
+        rollDone={rollDone}
+        dotColor="black"
+        faceColor="white"
+        dieCornerRadius={2}
+        dieSize={60}
+        outline
+        rollTime={1}
+      />
+    </div>
   );
 };
 
