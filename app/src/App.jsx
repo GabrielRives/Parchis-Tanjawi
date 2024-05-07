@@ -1,19 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { MapInteractionCSS } from "react-map-interaction";
 import './App.scss'
 import Dice from "./Dice/Dice"
-
+import Board from "./Board/Board"
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    
+      <div className="parchis">
+      
+      
+      <Board/>
+        <Dice />
+      </div>
+    
+  );
+};
 
-      <Dice/>
-
-    </>
-  )
-}
 
 export default App

@@ -1,0 +1,153 @@
+@use "src/styles/Variables.scss" as v;
+
+.board {
+  width: 902px;
+  height: 902px;
+  border: 8px solid v.$border-color;
+  display: flex;
+  flex-direction: column;
+  
+
+  &__topLane {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 0.25em solid v.$border-color;
+
+    &__yellowHouse {
+      background-color: gold;
+      width: 299px;
+      height: 299px;
+      border-right: 0.25em solid v.$border-color;
+    }
+    &__topPath {
+      background-color: rgb(243, 241, 232);
+      width: 299px;
+      height: 299px;
+      display:flex;
+      flex-direction: row;
+
+      &__leftColumn {
+        border-right: 0.25em solid v.$border-color;
+        width: 99px;
+        height: 100%;
+      }
+      &__centerColumn {
+        width: 99px;
+        height: 100%;
+      }
+      &__rightColumn {
+        border-left: 0.25em solid v.$border-color;
+        width: 99px;
+        height: 100%;
+      }
+    }
+    &__blueHouse {
+      background-color: rgb(70, 167, 241);
+      width: 299px;
+      height: 299px;
+      border-left: 0.25em solid v.$border-color;
+    }
+  }
+
+  &__midLane {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 0.25em solid v.$border-color;
+
+    &__leftPath {
+      background-color: rgb(243, 241, 232);
+      width: 299px;
+      height: 299px;
+      border-right: 0.25em solid v.$border-color;
+      display:flex;
+      flex-direction: column;
+
+      &__topRow{
+        border-bottom: 0.25em solid v.$border-color;
+        height: 99px;
+        width: 299px;
+      }
+      &__centerRow{
+        height: 99px;
+        width: 299px;
+      }
+      &__bottomRow{
+        border-top: 0.25em solid v.$border-color;
+        height: 99px;
+        width: 299px;
+      }
+    }
+    &__centerPath {
+      background-color: rgb(243, 241, 232);
+      width: 299px;
+      height: 299px;
+    }
+    &__rightPath {
+      background-color: rgb(243, 241, 232);
+      width: 299px;
+      height: 299px;
+      border-left: 0.25em solid v.$border-color;
+      display:flex;
+      flex-direction: column;
+
+      &__topRow{
+        border-bottom: 0.25em solid v.$border-color;
+        height: 99px;
+        width: 299px;
+      }
+      &__centerRow{
+        height: 99px;
+        width: 299px;
+      }
+      &__bottomRow{
+        border-top: 0.25em solid v.$border-color;
+        height: 99px;
+        width: 299px;
+      }
+    }
+  }
+
+  &__BotLane {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 0.25em solid v.$border-color;
+
+    &__greenHouse {
+      background-color: rgb(48, 138, 43);
+      width: 299px;
+      height: 299px;
+      border-right: 0.25em solid v.$border-color;
+    }
+    &__bottomPath {
+      background-color: rgb(243, 241, 232);
+      width: 299px;
+      height: 299px;
+      display:flex;
+      flex-direction: row;
+
+      &__leftColumn {
+        border-right: 0.25em solid v.$border-color;
+        width: 99px;
+        height: 100%;
+      }
+      &__centerColumn {
+        width: 99px;
+        height: 100%;
+      }
+      &__rightColumn {
+        border-left: 0.25em solid v.$border-color;
+        width: 99px;
+        height: 100%;
+      }
+    }
+    &__redHouse {
+      background-color: rgb(208, 32, 32);
+      width: 299px;
+      height: 299px;
+      border-left: 0.25em solid v.$border-color;
+    }
+  }
+}
