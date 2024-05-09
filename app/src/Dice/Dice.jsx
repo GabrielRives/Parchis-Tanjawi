@@ -20,7 +20,7 @@ const MyDiceApp = () => {
         ref={reactDice}
         rollDone={rollDone}
         dotColor="black"
-        faceColor="white"
+        faceColor="beige"
         dieCornerRadius={2}
         dieSize={60}
         outline

@@ -179,7 +179,74 @@ export default function Board() {
             ></div>
           </div>
         </div>
-        <div className="board__midLane__centerPath"></div>
+        <div className="board__midLane__centerPath">
+          <div
+            className="ConnectLine"
+            style={{ width: "300px", height: "300px" }}
+          ></div>
+          <div
+            className="ConnectLine2"
+            style={{ width: "300px", height: "300px" }}
+          ></div>
+
+          <div className="board__midLane__centerPath__topRow">
+            <div
+              className="board__midLane__centerPath__topRow__case25"
+              id="25"
+            ></div>
+            <div
+              className="board__midLane__centerPath__topRow__caseYellow7"
+              id="24Y"
+            ></div>
+            <div
+              className="board__midLane__centerPath__topRow__case9"
+              id="9"
+            ></div>
+          </div>
+          <div className="board__midLane__centerPath__midSection">
+            <div className="board__midLane__centerPath__midSection__leftRow">
+              <div
+                className="board__midLane__centerPath__midSection__leftRow__case26"
+                id="26"
+              ></div>
+              <div className="board__midLane__centerPath__midSection__leftRow__greenEnd"></div>
+              <div
+                className="board__midLane__centerPath__midSection__leftRow__case42"
+                id="42"
+              ></div>
+            </div>
+            <div className="board__midLane__centerPath__midSection__centerBoard">
+              <div className="board__midLane__centerPath__midSection__centerBoard__finishYellow"></div>
+              <div className="pitoPito" id="pitoPito"></div>
+              <div className="board__midLane__centerPath__midSection__centerBoard__finishRed"></div>
+            </div>
+            <div className="board__midLane__centerPath__midSection__rightRow">
+              <div
+                className="board__midLane__centerPath__midSection__rightRow__case8"
+                id="8"
+              ></div>
+              <div className="board__midLane__centerPath__midSection__rightRow__caseBlueEnd"></div>
+              <div
+                className="board__midLane__centerPath__midSection__rightRow__case60"
+                id="60"
+              ></div>
+            </div>
+          </div>
+          <div className="board__midLane__centerPath__botRow">
+            <div
+              className="board__midLane__centerPath__botRow__case43"
+              id="43"
+            ></div>
+            <div
+              className="board__midLane__centerPath__botRow__caseRed7"
+              id="58R"
+            ></div>
+            <div
+              className="board__midLane__centerPath__botRow__case59"
+              id="59"
+            ></div>
+          </div>
+        </div>
         <div className="board__midLane__rightPath">
           <div className="board__midLane__rightPath__topRow">
             <div

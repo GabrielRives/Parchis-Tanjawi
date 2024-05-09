@@ -259,9 +259,161 @@
       }
     }
     &__centerPath {
-      background-color: rgb(243, 241, 232);
       width: 299px;
       height: 299px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &__topRow {
+        width: 212px;
+        height: 43.5px;
+        background-color: aqua;
+        border-bottom: 0.25em solid v.$border-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &__case25 {
+          background-color: white;
+          height: 100%;
+          width: 25.5%;
+        }
+        &__caseYellow7 {
+          background-color: gold;
+          height: 100%;
+          width: 97px;
+          border-left: 0.25em solid v.$border-color;
+          border-right: 0.25em solid v.$border-color;
+        }
+
+        &__case9 {
+          background-color: white;
+          height: 100%;
+          width: 25.5%;
+        }
+      }
+
+      &__midSection {
+        height: 210px;
+        width: 299px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &__leftRow {
+          background-color: rgb(238, 225, 225);
+          width: 41px;
+          height: 212px;
+          border-right: 0.25em solid v.$border-color;
+
+          &__case26 {
+            background-color: white;
+            height: 25%;
+            width: 41px;
+          }
+
+          &__greenEnd {
+            background-color: rgb(48, 138, 43);
+            height: 98px;
+            width: 41px;
+            border-top: 0.25em solid v.$border-color;
+            border-bottom: 0.25em solid v.$border-color;
+          }
+          &__case42 {
+            background-color: white;
+            height: 25%;
+            width: 41px;
+          }
+        }
+
+        &__centerBoard {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 0px;
+          height: 0px;
+          border-top: 106px solid gold;
+          border-bottom: 106px solid rgb(208, 32, 32);
+          border-left: 106px solid rgb(48, 138, 43);
+          border-right: 104px solid rgb(70, 167, 241);
+          z-index: 0;position:relative;
+
+          &__finishYellow {
+            background-color: gold;
+            width: 42px;
+            height: 42px;
+            margin-bottom: 4em;
+            z-index: 8;
+            position:absolute;
+            bottom: 90%;;
+          }
+          &__finishRed {
+            background-color: rgb(208, 32, 32);
+            width: 42px;
+            height: 42px;
+            margin-top: 4em;
+            z-index: 8;
+            position: absolute;
+            top:90%;
+          }
+        }
+        &__rightRow {
+          background-color: rgb(212, 139, 139);
+          width: 41px;
+          height: 212px;
+          border-left: 0.25em solid v.$border-color;
+
+          &__case8 {
+            background-color: white;
+            height: 25%;
+            width: 41px;
+          }
+          &__caseBlueEnd {
+            background-color: rgb(70, 167, 241);
+            height: 98px;
+            width: 41px;
+            border-top: 0.25em solid v.$border-color;
+            border-bottom: 0.25em solid v.$border-color;
+          }
+          &__case60 {
+            background-color: white;
+            height: 25%;
+            width: 41px;
+          }
+        }
+      }
+
+      &__botRow {
+        background-color: rgb(225, 238, 227);
+        width: 211px;
+        height: 42px;
+        border-top: 0.25em solid v.$border-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &__case43 {
+          background-color: white;
+          height: 100%;
+          width: 25.5%;
+        }
+        &__caseRed7 {
+          background-color: rgb(208, 32, 32);
+          height: 100%;
+          width: 97px;
+          border-left: 0.25em solid v.$border-color;
+          border-right: 0.25em solid v.$border-color;
+        }
+
+        &__case59 {
+          background-color: white;
+          height: 100%;
+          width: 25.5%;
+        }
+      }
     }
     &__rightPath {
       background-color: rgb(243, 241, 232);
@@ -484,7 +636,7 @@
         }
         &__case56 {
           border-top: 0.15em solid v.$border-color;
-          background-color: rgb(208, 32, 32);;
+          background-color: rgb(208, 32, 32);
           height: 41px;
         }
         &__case55 {
@@ -494,7 +646,6 @@
         &__case54 {
           border-top: 0.15em solid v.$border-color;
           height: 41px;
-          
         }
         &__case53 {
           border-top: 0.15em solid v.$border-color;
@@ -514,4 +665,39 @@
       border-left: 0.25em solid v.$border-color;
     }
   }
+}
+
+.ConnectLine {
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    transparent 49.5%,
+    v.$border-color 49.5%,
+    v.$border-color 50.5%,
+    transparent 50.5%,
+    transparent
+  );
+}
+.ConnectLine2 {
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    transparent 49.5%,
+    v.$border-color 49.5%,
+    v.$border-color 50.5%,
+    transparent 50.5%,
+    transparent
+  );
+}
+
+.pitoPito {
+  width: 42px;
+  height: 42px;
+  z-index: 4;
 }
