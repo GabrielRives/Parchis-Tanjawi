@@ -6,14 +6,12 @@
   border: 8px solid v.$border-color;
   display: flex;
   flex-direction: column;
-  
 
   &__topLane {
     display: flex;
     flex-direction: row;
     justify-content: center;
     border-bottom: 0.25em solid v.$border-color;
-
     &__yellowHouse {
       background-color: gold;
       width: 299px;
@@ -24,22 +22,111 @@
       background-color: rgb(243, 241, 232);
       width: 299px;
       height: 299px;
-      display:flex;
+      display: flex;
       flex-direction: row;
-
       &__leftColumn {
         border-right: 0.25em solid v.$border-color;
         width: 99px;
         height: 100%;
+        background-color: white;
+        text-align: right;
+        &__case18 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case19 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case20 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case21 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case22 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+          background-color: gold;
+        }
+        &__case23 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case24 {
+          height: 42px;
+        }
       }
       &__centerColumn {
         width: 99px;
         height: 100%;
+        background-color: gold;
+        &__case17 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+          background-color: black;
+        }
+        &__caseYellow1 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseYellow2 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseYellow3 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseYellow4 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseYellow5 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseYellow6 {
+          height: 42px;
+        }
       }
       &__rightColumn {
         border-left: 0.25em solid v.$border-color;
         width: 99px;
         height: 100%;
+        background-color: white;
+        text-align: left;
+        &__case16 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case15 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case14 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case13 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case12 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+          background-color: black;
+        }
+        &__case11 {
+          border-bottom: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case10 {
+          height: 42px;
+          padding-left: 0.5em;
+        }
       }
     }
     &__blueHouse {
@@ -55,28 +142,120 @@
     flex-direction: row;
     justify-content: center;
     border-bottom: 0.25em solid v.$border-color;
-
     &__leftPath {
       background-color: rgb(243, 241, 232);
       width: 299px;
       height: 299px;
       border-right: 0.25em solid v.$border-color;
-      display:flex;
+      display: flex;
       flex-direction: column;
-
-      &__topRow{
+      &__topRow {
         border-bottom: 0.25em solid v.$border-color;
-        height: 99px;
-        width: 299px;
+        height: 97px;
+        width: 298px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        &__case33 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case32 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case31 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case30 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case29 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+          background-color: black;
+        }
+        &__case28 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case27 {
+          width: 42px;
+          height: 98px;
+        }
       }
-      &__centerRow{
-        height: 99px;
-        width: 299px;
+      &__centerRow {
+        height: 98px;
+        width: 298px;
+        background-color: rgb(48, 138, 43);
+        display: flex;
+        flex-direction: row;
+        &__case34 {
+          border-right: 0.15em solid v.$border-color;
+          background-color: black;
+          width: 41px;
+          height: 98px;
+        }
+        &__caseGreen {
+          border-right: 0.15em solid v.$border-color;
+          width: 40.5px;
+          height: 98px;
+        }
+        &__caseGreenEnd {
+          width: 41px;
+          height: 98px;
+        }
       }
-      &__bottomRow{
+      &__bottomRow {
         border-top: 0.25em solid v.$border-color;
-        height: 99px;
-        width: 299px;
+        height: 97px;
+        width: 298px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        &__case35 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 97px;
+        }
+        &__case36 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 97px;
+        }
+        &__case37 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 97px;
+        }
+        &__case38 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 97px;
+        }
+        &__case39 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 97px;
+          background-color: rgb(48, 138, 43);
+        }
+        &__case40 {
+          border-right: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 97px;
+        }
+        &__case41 {
+          width: 42px;
+          height: 97px;
+        }
       }
     }
     &__centerPath {
@@ -89,22 +268,115 @@
       width: 299px;
       height: 299px;
       border-left: 0.25em solid v.$border-color;
-      display:flex;
+      display: flex;
       flex-direction: column;
-
-      &__topRow{
+      &__topRow {
         border-bottom: 0.25em solid v.$border-color;
-        height: 99px;
+        height: 97px;
         width: 299px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        &__case7 {
+          width: 41px;
+          height: 98px;
+        }
+        &__case6 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case5 {
+          border-left: 0.15em solid v.$border-color;
+          background-color: rgb(70, 167, 241);
+          width: 41px;
+          height: 97px;
+        }
+        &__case4 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case3 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case2 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case1 {
+          border-left: 0.15em solid v.$border-color;
+          width: 42px;
+          height: 98px;
+        }
       }
-      &__centerRow{
-        height: 99px;
+      &__centerRow {
+        height: 98px;
         width: 299px;
+        background-color: rgb(70, 167, 241);
+        display: flex;
+        flex-direction: row;
+        &__caseBlueEnd {
+          width: 41px;
+          height: 98px;
+        }
+        &__caseBlue {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case68 {
+          border-left: 0.15em solid v.$border-color;
+          background-color: black;
+          width: 42px;
+          height: 98px;
+        }
       }
-      &__bottomRow{
+      &__bottomRow {
         border-top: 0.25em solid v.$border-color;
-        height: 99px;
+        height: 97px;
         width: 299px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        &__case61 {
+          width: 41px;
+          height: 98px;
+        }
+        &__case62 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case63 {
+          border-left: 0.15em solid v.$border-color;
+          background-color: black;
+          width: 41px;
+          height: 98px;
+        }
+        &__case64 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case65 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case66 {
+          border-left: 0.15em solid v.$border-color;
+          width: 41px;
+          height: 98px;
+        }
+        &__case67 {
+          border-left: 0.15em solid v.$border-color;
+          width: 42px;
+          height: 98px;
+        }
       }
     }
   }
@@ -125,22 +397,114 @@
       background-color: rgb(243, 241, 232);
       width: 299px;
       height: 299px;
-      display:flex;
+      display: flex;
       flex-direction: row;
 
       &__leftColumn {
         border-right: 0.25em solid v.$border-color;
         width: 99px;
         height: 100%;
+        background-color: white;
+        text-align: right;
+        &__case44 {
+          height: 41px;
+        }
+        &__case45 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case46 {
+          border-top: 0.15em solid v.$border-color;
+          background-color: black;
+          height: 41px;
+        }
+        &__case47 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case48 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case49 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case50 {
+          height: 42px;
+          border-top: 0.15em solid v.$border-color;
+        }
       }
       &__centerColumn {
         width: 99px;
         height: 100%;
+        background-color: rgb(208, 32, 32);
+
+        &__caseRed6 {
+          height: 41px;
+        }
+        &__caseRed5 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseRed4 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseRed3 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseRed2 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__caseRed1 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case51 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+          background-color: black;
+        }
       }
       &__rightColumn {
         border-left: 0.25em solid v.$border-color;
         width: 99px;
         height: 100%;
+        background-color: white;
+        text-align: left;
+        &__case58 {
+          height: 41px;
+        }
+        &__case57 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case56 {
+          border-top: 0.15em solid v.$border-color;
+          background-color: rgb(208, 32, 32);;
+          height: 41px;
+        }
+        &__case55 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case54 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+          
+        }
+        &__case53 {
+          border-top: 0.15em solid v.$border-color;
+          height: 41px;
+        }
+        &__case52 {
+          border-top: 0.15em solid v.$border-color;
+          height: 42px;
+          padding-left: 0.5em;
+        }
       }
     }
     &__redHouse {
