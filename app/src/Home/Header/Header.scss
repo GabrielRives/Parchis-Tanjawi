@@ -1,0 +1,66 @@
+@use "src/styles/Variables.scss" as v;
+
+//Le dé tournant est traité séparément des autres classNames
+.logoDie {
+  background: v.$border-color;
+  width: 6em;
+  border: 1px solid v.$border-color;
+  border-radius: 0.5em;
+  animation: loading 3s linear infinite;
+  @keyframes loading {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.header {
+  width: 100vw;
+  height: 10em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+background: rgb(255,252,244);
+background: linear-gradient(90deg, rgba(255,252,244,1) 0%, rgba(255,251,225,1) 30%, rgba(68,25,4,1) 100%);
+border-bottom: 2px solid v.$border-color;
+
+  &__logoTitle {
+    display: flex;
+    flex-direction: row;
+align-items: center;
+    padding-left: 2em;
+
+    &__titleGame {
+      font-size: 6em;
+      font-family: "cabin", serif;
+      margin: 0;
+      color: v.$border-color;
+
+      padding-left: 0.5em;
+    }
+  }
+
+  &__logSpace{
+    display:flex;
+    flex-direction: row;
+    gap:1em;
+    padding-right:1em;
+
+    &__buttonLog{
+        font-size: 2em;
+        color: v.$border-color;
+        border-radius: 2em;
+        padding-left:0.5em;
+        padding-right:0.5em;
+    }
+      &__buttonLog:hover{
+       background-color: #c5a78b;
+        color:white;
+ 
+    }
+  }
+}

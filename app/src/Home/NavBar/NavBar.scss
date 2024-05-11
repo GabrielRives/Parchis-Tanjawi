@@ -1,0 +1,126 @@
+@use "src/styles/Variables.scss" as v;
+
+.navigationContainer {
+  width: 14em;
+  height: 80vh;
+  color: v.$border-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__home {
+    width: 4em;
+    font-size: 2em;
+    margin-left: 1em;
+    border: 2px solid v.$border-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    border-radius: 0.5em;
+    background-color: #fffcf4;
+    color:v.$border-color;
+text-decoration: none;
+  }
+  &__home:hover {
+    height: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.2em;
+    border-radius: 10em;
+    text-align: center;
+    background-color: rgb(70, 167, 241);
+    color: white;
+    transition-duration: 1s;
+    box-shadow: 2px 3px 3px v.$border-color;
+  }
+
+  &__rules {
+    width: 4em;
+    font-size: 2em;
+    margin-left: 1em;
+    border: 2px solid v.$border-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    border-radius: 0.5em;
+     background-color: #fffcf4;
+      background-color: #fffcf4;
+    color:v.$border-color;
+text-decoration: none;
+  }
+  &__rules:hover {
+    height: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.2em;
+    border-radius: 10em;
+    text-align: center;
+    background-color: #308a2b;
+    color: white;
+    transition-duration: 1s;
+     box-shadow: 2px 3px 3px v.$border-color;
+  }
+
+  &__ranking {
+    width: 4em;
+    font-size: 2em;
+    margin-left: 1em;
+    border: 2px solid v.$border-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    border-radius: 0.5em;
+     background-color: #fffcf4;
+      background-color: #fffcf4;
+    color:v.$border-color;
+text-decoration: none;
+  }
+  &__ranking:hover {
+    height: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.2em;
+    border-radius: 10em;
+    text-align: center;
+    background-color: gold;
+    color: white;
+    transition-duration: 1s;
+     box-shadow: 2px 3px 3px v.$border-color;
+    
+  }
+
+  &__rivals {
+    width: 4em;
+    font-size: 2em;
+    margin-left: 1em;
+    border: 2px solid v.$border-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    border-radius: 0.5em;
+     background-color: #fffcf4;
+      background-color: #fffcf4;
+    color:v.$border-color;
+text-decoration: none;
+  }
+  &__rivals:hover {
+    height: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.2em;
+    border-radius: 10em;
+    text-align: center;
+    background-color: #d02020;
+    color: white;
+    transition-duration: 1s;
+     box-shadow: 2px 3px 3px v.$border-color;
+  }
+}

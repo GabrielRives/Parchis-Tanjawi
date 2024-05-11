@@ -1,0 +1,19 @@
+@use "src/styles/Variables.scss" as v;
+
+.home {
+  width: 100vw;
+  height: 100vh;
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+  
+  &__buttonStart {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }}}

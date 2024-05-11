@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Board.scss";
 
+
 export default function Board() {
   return (
     <div className="board">
@@ -217,7 +218,9 @@ export default function Board() {
             </div>
             <div className="board__midLane__centerPath__midSection__centerBoard">
               <div className="board__midLane__centerPath__midSection__centerBoard__finishYellow"></div>
-              <div className="pitoPito" id="pitoPito"></div>
+              <div className="pitoPito" id="pitoPito">
+               
+              </div>
               <div className="board__midLane__centerPath__midSection__centerBoard__finishRed"></div>
             </div>
             <div className="board__midLane__centerPath__midSection__rightRow">
@@ -422,6 +425,8 @@ export default function Board() {
         <div className="board__BotLane__redHouse"></div>
       </div>
       {/*Fin Botlane ---------------------------------------------------------------------------------------------------------------------------------------------------------- Midlane */}
+      
     </div>
+   
   );
 }

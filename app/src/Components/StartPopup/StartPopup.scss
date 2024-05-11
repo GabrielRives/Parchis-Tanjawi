@@ -1,0 +1,66 @@
+@use "src/styles/Variables.scss" as v;
+
+.buttonStart {
+  width: 10em;
+  padding: 0.5em;
+  font-size: 2em;
+  margin-left: 1em;
+  border: 2px solid #fffcf4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5em;
+  background-color: v.$border-color;
+  background-color: v.$border-color;
+  color: #fffcf4;
+  text-decoration: none;
+
+
+&__startGameContainer {
+  width: 50em;
+  height: 40em;
+  background: rgb(255, 252, 244);
+  border: 2px solid v.$border-color;
+
+  &__boxTitle{
+    font-size: 2em;
+    text-align: center;
+    color:v.$text-color
+  }
+  &__mode{
+    padding-top: 1em;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    &__duel{
+    color:v.$text-color;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    &__icon{
+        width:5em;
+        padding:0.5em;
+        border: 2px solid v.$border-color;
+        border-radius: 5em;
+        
+    }
+    }
+    &__tournament{
+        color:v.$text-color;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+     &__icon{
+        
+         width:5em;
+        padding:0.5em;
+        border: 2px solid v.$border-color;
+        border-radius: 5em;
+        
+    }
+    }
+  }
+}
+}

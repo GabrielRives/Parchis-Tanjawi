@@ -1,22 +1,27 @@
 import { useState } from 'react'
-import { MapInteractionCSS } from "react-map-interaction";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.scss'
-import Dice from "./Dice/Dice"
-import Board from "./Board/Board"
+import Dice from "./Game/Dice/Dice"
+import Board from "./Game/Board/Board"
+import Home from './Home/Home'
+
+
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    
-      <div className="parchis">
-      
-      
-      <Board/>
-        <Dice />
-      </div>
-    
-  );
+    const router = createBrowserRouter([
+      { path: "/", element: <Home /> },
+      { path: "/board", element: <Board /> },
+    ]);
+    return <RouterProvider router={router} />;
+
+  
+
+
+
 };
+
+
 
 
 export default App
