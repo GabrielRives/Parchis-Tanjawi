@@ -1,0 +1,56 @@
+@use "src/styles/Variables.scss" as v;
+
+.logoDie {
+  background: v.$border-color;
+  width: 6em;
+  border: 1px solid v.$border-color;
+  border-radius: 0.5em;
+  animation: loading 3s linear infinite;
+  @keyframes loading {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.rulesPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffcf497;
+
+  &__rulesHeader {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2em;
+    padding-top: 0.5em;
+    background-color: #fffbe1;
+    border-right: 2px solid v.$border-color;
+    border-bottom: 2px solid v.$border-color;
+    border-bottom-right-radius: 10em;
+    &__title {
+      font-size: 6em;
+      font-family: "cabin", serif;
+      margin: 0;
+      color: v.$border-color;
+      padding-left: 0.5em;
+    }
+  }
+  &__rulesBody {
+    display: flex;
+    flex-direction: row;
+
+    &__rulesSections {
+      margin-top: 1em;
+      width: 80vw;
+      height: 80vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}

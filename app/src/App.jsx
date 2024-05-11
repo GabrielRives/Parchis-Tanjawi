@@ -4,6 +4,7 @@ import './App.scss'
 import Dice from "./Game/Dice/Dice"
 import Board from "./Game/Board/Board"
 import Home from './Home/Home'
+import Rules from './RulesPage/RulesPage';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/board", element: <Board /> },
+      { path: "/rules", element: <Rules /> },
     ]);
     return <RouterProvider router={router} />;
 
