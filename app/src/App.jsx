@@ -5,6 +5,7 @@ import Dice from "./Game/Dice/Dice"
 import Board from "./Game/Board/Board"
 import Home from './Home/Home'
 import Rules from "./Components/RulesPage/RulesPage";
+import Ranking from './Components/RankingPage/RankingPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       { path: "/", element: <Home /> },
       { path: "/board", element: <Board /> },
       { path: "/rules", element: <Rules /> },
+      { path: "/ranking", element: <Ranking /> },
     ]);
     return <RouterProvider router={router} />;
 
