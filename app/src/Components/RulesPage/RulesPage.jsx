@@ -1,7 +1,7 @@
 import "./RulesPage.scss";
 import { Link } from "react-router-dom";
 import diceLogo from "/src/assets/dice.svg";
-import NavBar from "../Home/NavBar/NavBar";
+import NavBar from "/src/Home/NavBar/NavBar.jsx";
 import Introduction from "./Introduction/Introduction";
 import HowToPlay from "./HowToPlay/HowToPlay";
 import Movement from "./Movement/Movement";

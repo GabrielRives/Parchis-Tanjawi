@@ -4,7 +4,7 @@ import './App.scss'
 import Dice from "./Game/Dice/Dice"
 import Board from "./Game/Board/Board"
 import Home from './Home/Home'
-import Rules from './RulesPage/RulesPage';
+import Rules from "./Components/RulesPage/RulesPage";
 
 
 function App() {

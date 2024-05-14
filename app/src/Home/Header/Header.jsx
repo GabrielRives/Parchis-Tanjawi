@@ -3,6 +3,7 @@ import React from "react";
 import Popup from "reactjs-popup";
 import diceLogo from "/src/assets/dice.svg";
 import Login from '../Login/Login';
+import Register from '../Register/Register';
 import './Header.scss'
 export default function Header() {
   return (
@@ -14,13 +15,24 @@ export default function Header() {
         <h1 className="header__logoTitle__titleGame"> Parchis Tanjawi</h1>
       </div>
       <div className="header__logSpace">
-      <Popup
-      trigger={
-        <button className="header__logSpace__buttonLog">Se connecter</button>
-      } position="bottom right">
-        <Login/>
-      </Popup>
-        <button className="header__logSpace__buttonLog">S'inscrire</button>
+        <Popup
+          trigger={
+            <button className="header__logSpace__buttonLog">
+              Se connecter
+            </button>
+          }
+          position="bottom right"
+        >
+          <Login />
+        </Popup>
+        <Popup
+          trigger={
+            <button className="header__logSpace__buttonLog">S'inscrire</button>
+          }
+          position="bottom right"
+        >
+          <Register />
+        </Popup>
       </div>
     </div>
   );
