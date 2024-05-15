@@ -52,6 +52,8 @@ align-items: center;
 
     &__buttonLog{
         font-size: 2em;
+        background-color:rgb(255,252,244);
+        border: 2px solid v.$border-color;
         color: v.$border-color;
         border-radius: 0.5em;
         padding-left:0.5em;
@@ -60,7 +62,9 @@ align-items: center;
       &__buttonLog:hover{
        background-color: #c5a78b;
         color:white;
- 
+        transition-duration: 0.75s;
+        
+        
     }
   }
 }
