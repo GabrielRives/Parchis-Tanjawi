@@ -16,3 +16,4 @@ export default function Home() {
     </div>
   );
 }
+//simple ajout pour test gitHUb
