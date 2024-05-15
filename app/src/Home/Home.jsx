@@ -3,7 +3,7 @@ import NavBar from "./NavBar/NavBar";
 import StartPopup from "../Components/StartPopup/StartPopup";
 import "./Home.scss";
 
-export default function Home({}) {
+export default function Home() {
   return (
     <div className="home">
       <Header />
