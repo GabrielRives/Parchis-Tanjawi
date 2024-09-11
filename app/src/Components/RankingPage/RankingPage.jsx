@@ -1,7 +1,6 @@
 import "./RankingPage.scss";
 import { Link } from "react-router-dom";
 import diceLogo from "/src/assets/dice.svg";
-import medal from "/src/assets/medal.svg";
 import NavBar from "/src/Home/NavBar/NavBar.jsx";
 
 function Ranking() {
@@ -141,7 +140,33 @@ function Ranking() {
               </h1>
             </div>
           </div>
+          <div className="rankingPage__rankBody__chart__userRank" id="userRank">
+            <h1 className="rankingPage__rankBody__chart__userRank__medalIcon">
+              X
+            </h1>
+            <h1 className="rankingPage__rankBody__chart__userRank__nickName">
+              CurrentPlayer
+            </h1>
+            <div className="rankingPage__rankBody__chart__userRank__scores">
+              <h1 className="rankingPage__rankBody__chart__userRank__scores__victory">
+               xx
+              </h1>
+              <h1>/</h1>
+              <h1 className="rankingPage__rankBody__chart__userRank__scores__defeats">
+                xx
+              </h1>
+              <h1>/</h1>
+              <h1 className="rankingPage__rankBody__chart__userRank__scores__kills">
+                xx
+              </h1>
+              <h1>/</h1>
+              <h1 className="rankingPage__rankBody__chart__userRank__scores__ratio">
+                {Math.round((4 / 10) * 100) + "%"}
+              </h1>
+            </div>
+          </div>
         </div>
+
         <div className="rankingPage__rankBody__helpSection">
           <h2 className="rankingPage__rankBody__helpSection__title">
             Lire le score:
@@ -154,7 +179,7 @@ function Ranking() {
           </li>
           <li>
             <strong>Compteur de morts:</strong> nombre de fichas mangées sur
-            l'ensemble des parties.
+           l'ensemble des parties.
           </li>
           <li>
             <strong>Classement au ratio: </strong> pourcentage de victoires par

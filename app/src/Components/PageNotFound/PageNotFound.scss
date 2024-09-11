@@ -1,0 +1,33 @@
+@use "src/styles/Variables.scss" as v;
+
+.pageNotFound {
+  width: 100vw;
+  height: 100vh;
+  background-color: v.$border-color;
+  color: v.$text-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__picture {
+    width: 90vh;
+  }
+
+  &__dialogueBox {
+    position: absolute;
+  
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      font-size: 2em;
+      background-color: v.$primary-color;
+      border: 2px solid v.$border-color;
+      padding: 1em;
+      border-radius: 3em;
+      margin-bottom: 0;
+    }
+   
+  }
+}

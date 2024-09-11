@@ -2,7 +2,7 @@
 
 //Le dé tournant est traité séparément des autres classNames
 .logoDie {
-  background: v.$border-color;
+
   width: 6em;
   border: 1px solid v.$border-color;
   border-radius: 0.5em;
@@ -24,15 +24,22 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-background: rgb(255,252,244);
-background: linear-gradient(90deg, rgba(255,252,244,1) 0%, #fffbe1 30%, rgba(68,25,4,1) 100%);
-border-bottom: 2px solid v.$border-color;
+
 
   &__logoTitle {
+    font-size: 0.75em;
     display: flex;
     flex-direction: row;
 align-items: center;
     padding-left: 2em;
+    padding-right:6em;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
 
     &__titleGame {
       font-size: 6em;
@@ -46,23 +53,26 @@ align-items: center;
 
   &__logSpace{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     gap:1em;
-    padding-right:1em;
+ 
 
     &__buttonLog{
-        font-size: 2em;
-        background-color:rgb(255,252,244);
-        border: 2px solid v.$border-color;
+        font-size: 1em;
+        font-weight: bold;
+        padding:0.5em;
+  border: none;
+       background-color:v.$lighter-color ;
         color: v.$border-color;
-        border-radius: 0.5em;
-        padding-left:0.5em;
-        padding-right:0.5em;
+        
+        padding-left:2.5em;
+        padding-right:2.5em;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
     }
       &__buttonLog:hover{
        background-color: #c5a78b;
         color:white;
-        transition-duration: 0.75s;
+        transition-duration: 0.5s;
         
         
     }

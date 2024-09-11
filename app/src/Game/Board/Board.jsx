@@ -1,8 +1,9 @@
-import { useState } from "react";
+
 import "./Board.scss";
 
 
 export default function Board() {
+  
   return (
     <div className="board">
       {/*Debut  toplane ---------------------------------------------------------------------------------------------------------------------------------------------------------- toplane */}

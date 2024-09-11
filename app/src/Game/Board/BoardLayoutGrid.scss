@@ -1,0 +1,149 @@
+@use "src/styles/Variables.scss" as v;
+
+.Boardmap {
+  width: 100vw;
+  height: 150vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__gridBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__topSection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      align-items: center;
+
+      &__oneToEight {
+        .gridSection {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+      &__nineToSixteen {
+        .gridSection {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+       &__yellowHouse {
+        .gridSection {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &__18To25 {
+        .gridSection {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &__26To33 {
+        .gridSection {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    &__middleSection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &__greenHouse {
+        .gridSection {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+      &__blueHouse {
+        .gridSection {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    &__bottomSection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+      align-items: center;
+
+          &__35To42 {
+        .gridSection {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+        &__43To50 {
+        .gridSection {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+         &__redHouse {
+        .gridSection {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+         &__52To59 {
+        .gridSection {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+         &__60To67 {
+        .gridSection {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
+
+.gridCase {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caseSecurity1,
+.caseSecurity2,
+.caseSecurity3,
+.caseSecurity4,
+.caseSecurity5,
+.caseSecurity6,
+.caseSecurity7,
+.caseSecurity8,
+.caseSecurity9,
+.caseSecurity10 {
+  background-color: #f2d7d7; /* Exemple de couleur de sécurité */
+}
+
+.sortieMaisonJaune {
+  background-color: yellow;
+}
+
+.sortieMaisonRouge {
+  background-color: red;
+}

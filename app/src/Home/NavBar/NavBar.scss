@@ -7,125 +7,36 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
 
-  &__home {
-    width: 4em;
+  &__home,
+  &__rules,
+  &__ranking,
+  &__rivals {
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%);
+    width: 6em;
     font-size: 2em;
-    margin-left: 1em;
-    border: 2px solid v.$border-color;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-   
-    border-radius: 0.5em;
-    background-color: #fffcf4;
-    color:v.$border-color;
-text-decoration: none;
-transition-duration: 1s;
+
+    background-color: #fffcf4c9;
+    color: v.$border-color;
+    text-decoration: none;
+    transition-duration: 0.5s;
   }
-  &__home:hover {
-    height: 3em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    font-size: 2.2em;
-    border-radius: 10em;
+  &__home:hover,
+  &__rules:hover,
+  &__ranking:hover,
+  &__rivals:hover {
     text-align: center;
-    background-color: rgb(70, 167, 241);
+    background-color: rgb(182, 159, 135);
     color: white;
     transition-duration: 1s;
     box-shadow: 2px 3px 3px v.$border-color;
   }
 
-  &__rules {
-    width: 4em;
-    font-size: 2em;
-    margin-left: 1em;
-    border: 2px solid v.$border-color;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  
-    border-radius: 0.5em;
-     background-color: #fffcf4;
-      background-color: #fffcf4;
-    color:v.$border-color;
-text-decoration: none;
-transition-duration: 1s;
-  }
-  &__rules:hover {
-    height: 3em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    font-size: 2.2em;
-    border-radius: 10em;
-    text-align: center;
-    background-color: #308a2b;
-    color: white;
-    transition-duration: 1s;
-     box-shadow: 2px 3px 3px v.$border-color;
-  }
-
-  &__ranking {
-    width: 4em;
-    font-size: 2em;
-    margin-left: 1em;
-    border: 2px solid v.$border-color;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-    border-radius: 0.5em;
-     background-color: #fffcf4;
-      background-color: #fffcf4;
-    color:v.$border-color;
-text-decoration: none;
-transition-duration: 1s;
-  }
-  &__ranking:hover {
-    height: 3em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    font-size: 2.2em;
-    border-radius: 10em;
-    text-align: center;
-    background-color: gold;
-    color: white;
-    transition-duration: 1s;
-     box-shadow: 2px 3px 3px v.$border-color;
-    
-  }
-
-  &__rivals {
-    width: 4em;
-    font-size: 2em;
-    margin-left: 1em;
-    border: 2px solid v.$border-color;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-   
-    border-radius: 0.5em;
-     background-color: #fffcf4;
-      background-color: #fffcf4;
-    color:v.$border-color;
-text-decoration: none;
-transition-duration: 1s;
-  }
-  &__rivals:hover {
-    height: 3em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    font-size: 2.2em;
-    border-radius: 10em;
-    text-align: center;
-    background-color: #d02020;
-    color: white;
-    transition-duration: 1s;
-     box-shadow: 2px 3px 3px v.$border-color;
-  }
 }
