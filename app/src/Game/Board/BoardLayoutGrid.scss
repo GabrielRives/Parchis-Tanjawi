@@ -1,133 +1,201 @@
 @use "src/styles/Variables.scss" as v;
 
+#root {
+  color: v.$text-color;
+}
 .Boardmap {
-  width: 100vw;
-  height: 150vh;
+background-color:v.$board-color;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+   width:1150px;
+  height:1150px;
+  border: 2px solid v.$text-color
 
-  &__gridBody {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &__topSection {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-around;
-      align-items: center;
-
-      &__oneToEight {
-        .gridSection {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
-      &__nineToSixteen {
-        .gridSection {
-          display: flex;
-          flex-direction: column-reverse;
-        }
-      }
-       &__yellowHouse {
-        .gridSection {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      &__18To25 {
-        .gridSection {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      &__26To33 {
-        .gridSection {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
-    }
-    &__middleSection {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      &__greenHouse {
-        .gridSection {
-          display: flex;
-          flex-direction: row;
-        }
-      }
-      &__blueHouse {
-        .gridSection {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
-    }
-    &__bottomSection {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content:space-around;
-      align-items: center;
-
-          &__35To42 {
-        .gridSection {
-          display: flex;
-          flex-direction: row;
-        }
-      }
-        &__43To50 {
-        .gridSection {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-         &__redHouse {
-        .gridSection {
-          display: flex;
-          flex-direction: column-reverse;
-        }
-      }
-         &__52To59 {
-        .gridSection {
-          display: flex;
-          flex-direction: column-reverse;
-        }
-      }
-         &__60To67 {
-        .gridSection {
-          display: flex;
-          flex-direction: row;
-        }
-      }
-    }
-  }
 }
 
-.gridCase {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #000;
+.gridBody {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.caseSecurity1,
+//----------------------------------------------------partie haute du plateau de jeu ---------------------------------------
+.topSection {
+  z-index:2;
+  position:relative;
+  top:0.95%;
+ width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.oneToEight {
+display:flex;
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionA {
+    width:100%;
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+  
+}
+.nineToSixteen {
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionB {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.yellowHouse {
+  background-color: v.$yellowsSegments-color;
+  .gridSectionB {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.eighteenTo25 {
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionB {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.twentySixTo33 {
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionA {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+//------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------partie centrale----------------------------------------------------------
+.middleSection {
+ width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.middleLeft{
+  
+  z-index:2;
+  position:relative;
+ right:12.9%;
+.greenHouse {
+  position:relative;
+  background-color: v.$greensSegments-color;
+  .gridSectionA {
+    display: flex;
+    flex-direction: row;
+  }
+}
+}
+.middleRight{
+    z-index:2;
+  position:relative;
+left:12.9%;
+
+.blueHouse {
+  background-color: v.$bluesSegments-color;
+  .gridSectionA {
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+
+}
+}
+//-------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------partie basse du plateau -----------------------------------------------
+.bottomSection {
+  position:relative;
+  bottom:0.95%;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirtyFiveTo42 {
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionA {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.fourtyThreeTo50 {
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionB {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.redHouse {
+  background-color:v.$redsSegments-color;
+  .gridSectionB {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.fiftyTwoTo59 {
+  background-color: v.$cases-and-backHouse-color;
+  .gridSectionB {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.sixtyTo67 {
+  background-color: v.$cases-and-backHouse-color;
+  
+  .gridSectionA {
+    display: flex;
+    flex-direction: row;
+    
+   
+  }
+}
+
+
+// Classe pour les cases plus hautes que larges
+.gridCaseVertical {
+  width: 50px;
+  height: 97px; /* Plus haute que large */
+    border: 1px solid v.$text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+// Classe pour les cases plus larges que hautes
+.gridCaseHorizontal {
+  width: 97px; /* Plus large que haute */
+  height: 50px;
+  border: 1px solid v.$text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+
+
+
 .caseSecurity2,
 .caseSecurity3,
 .caseSecurity4,
@@ -137,13 +205,66 @@
 .caseSecurity8,
 .caseSecurity9,
 .caseSecurity10 {
-  background-color: #f2d7d7; /* Exemple de couleur de sécurité */
+ 
+  background-color: v.$text-color; /* Exemple de couleur de sécurité */
 }
 
 .sortieMaisonJaune {
-  background-color: yellow;
+  background-color: v.$yellowsSegments-color;
 }
 
 .sortieMaisonRouge {
-  background-color: red;
+  background-color: v.$redsSegments-color
+}
+
+.middleSquare{
+ position:absolute;
+  width:300px;
+  height:300px;
+  background-color: v.$cases-and-backHouse-color;
+   border: 1px solid v.$text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:50px;
+}
+
+
+.mainRedHouse{
+   background-color: v.$cases-and-backHouse-color;
+      border: 1px solid v.$text-color;
+  position:absolute;
+  bottom:1%;
+  right:1%;
+  width:405px;
+  height:405px;
+}
+.mainBlueHouse{
+   background-color: v.$cases-and-backHouse-color;
+      border: 1px solid v.$text-color;
+  position:absolute;
+ top:1%;
+  right:1%;
+   width:405px;
+  height:405px;
+}
+.mainGreenHouse{
+   background-color: v.$cases-and-backHouse-color;
+      border: 1px solid v.$text-color;
+  position:absolute;
+ bottom:1%;
+ left:1%;
+
+  width:405px;
+  height:405px;
+}
+.mainYellowHouse{
+   background-color: v.$cases-and-backHouse-color;
+      border: 1px solid v.$text-color;
+  position:absolute;
+ top:1%;
+ left:1%;
+
+  width:405px;
+  height:405px;
 }

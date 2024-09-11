@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./BoardLayoutGrid.scss";
+import { MapInteractionCSS } from "react-map-interaction";
 
 const cases = {
   1: "case1",
@@ -100,16 +101,19 @@ const cases = {
   68.6: "blueHouse6",
   68.7: "blueHouse7",
 };
-
 function Board() {
-  // Function to render a section of the board with specific range of case numbers
-  const renderSection = (start, end) => {
+  // Function to render a section of the board with specific range of case numbers and orientation
+  const renderSection = (start, end, orientation) => {
     return (
-      <div className="gridSection">
+      <div className={`gridSectionA gridSectionB`}>
         {Object.entries(cases)
           .filter(([key]) => key >= start && key <= end)
           .map(([key, value]) => (
-            <div key={key} id={value} className={`gridCase ${value}`}>
+            <div
+              key={key}
+              id={value}
+              className={`gridCase ${orientation === "vertical" ? "gridCaseVertical" : "gridCaseHorizontal"}`}
+            >
               {value}
             </div>
           ))}
@@ -118,53 +122,65 @@ function Board() {
   };
 
   return (
-    <div className="Boardmap">
-      <div className="Boardmap__gridBody">
-        <div className="Boardmap__gridBody__topSection">
-          <div className="Boardmap__gridBody__topSection__oneToEight">
-            {renderSection(1, 8)} {/* Section 1 to 8 */}
+    <MapInteractionCSS>
+      <div className="Boardmap">
+        <div className="mainRedHouse"></div>
+        <div className="mainBlueHouse"></div>
+        <div className="mainGreenHouse"></div>
+        <div className="mainYellowHouse"></div>
+        <div className="gridBody">
+          <div className="topSection">
+            <div className="nineToSixteen">
+              {renderSection(9, 16, "horizontal")} {/* Plus large que haute */}
+            </div>
+            <div className="yellowHouse">
+              {renderSection(17, 17.7, "horizontal")} {/* Plus large que haute */}
+            </div>
+            <div className="eighteenTo25">
+              {renderSection(18, 25, "horizontal")} {/* Plus large que haute */}
+            </div>
           </div>
-          <div className="Boardmap__gridBody__topSection__nineToSixteen">
-            {renderSection(9, 16)} {/* Section 9 to 16 */}
+
+          <div className="middleSection">
+            <div className="middleLeft">
+              <div className="twentySixTo33">
+                {renderSection(26, 33, "vertical")} {/* Plus haute que large */}
+              </div>
+              <div className="greenHouse">
+                {renderSection(34, 34.7, "vertical")} {/* Plus haute que large */}
+                <div className="thirtyFiveTo42">
+                  {renderSection(35, 42, "vertical")} {/* Plus haute que large */}
+                </div>
+              </div>
+            </div>
+            <div className="middleSquare"></div>
+            <div className="middleRight">
+              <div className="oneToEight">
+                {renderSection(1, 8, "vertical")} {/* Plus haute que large */}
+              </div>
+              <div className="blueHouse">
+                {renderSection(68, 68.7, "vertical")} {/* Plus haute que large */}
+              </div>
+              <div className="sixtyTo67">
+                {renderSection(60, 67, "vertical")} {/* Plus haute que large */}
+              </div>
+            </div>
           </div>
-          <div className="Boardmap__gridBody__topSection__yellowHouse">
-            {renderSection(17, 17.7)} {/* Section 17 */}
-          </div>
-          <div className="Boardmap__gridBody__topSection__18To25">
-            {renderSection(18, 25)} {/* Section 18 to 25 */}
-          </div>
-          <div className="Boardmap__gridBody__topSection__26To33">
-            {renderSection(26, 33)} {/* Section 26 to 33 */}
-          </div>
-        </div>
-        <div className="Boardmap__gridBody__middleSection">
-          <div className="Boardmap__gridBody__middleSection__greenHouse">
-            {renderSection(34, 34.7)} {/* Section 34 */}
-          </div>
-          <div className="Boardmap__gridBody__middleSection__blueHouse">
-            {renderSection(68, 68.7)} {/* Section 68 */}
-          </div>
-        </div>
-        <div className="Boardmap__gridBody__bottomSection">
-          <div className="Boardmap__gridBody__bottomSection__35To42">
-            {renderSection(35, 42)} {/* Section 35 to 42 */}
-          </div>
-          <div className="Boardmap__gridBody__bottomSection__43To50">
-            {renderSection(43, 50)} {/* Section 43 to 50 */}
-          </div>
-          <div className="Boardmap__gridBody__bottomSection__redHouse">
-            {renderSection(51, 51.7)} {/* Section 51 */}
-          </div>
-          <div className="Boardmap__gridBody__bottomSection__52To59">
-            {renderSection(52, 59)} {/* Section 52 to 59 */}
-          </div>
-          <div className="Boardmap__gridBody__bottomSection__60To67">
-     
-            {renderSection(60, 67)} {/* Section 60 to 67 */}
+
+          <div className="bottomSection">
+            <div className="fourtyThreeTo50">
+              {renderSection(43, 50, "horizontal")} {/* Plus large que haute */}
+            </div>
+            <div className="redHouse">
+              {renderSection(51, 51.7, "horizontal")} {/* Plus large que haute */}
+            </div>
+            <div className="fiftyTwoTo59">
+              {renderSection(52, 59, "horizontal")} {/* Plus large que haute */}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </MapInteractionCSS>
   );
 }
 
