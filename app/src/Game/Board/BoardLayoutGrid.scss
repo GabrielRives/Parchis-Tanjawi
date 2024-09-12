@@ -4,15 +4,14 @@
   color: v.$text-color;
 }
 .Boardmap {
-background-color:v.$board-color;
+  background-color: v.$board-color;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-   width:1150px;
-  height:1150px;
-  border: 2px solid v.$text-color
-
+  width: 1152px;
+  height: 1152px;
+  border: 2px solid v.$text-color;
 }
 
 .gridBody {
@@ -26,103 +25,99 @@ background-color:v.$board-color;
 
 //----------------------------------------------------partie haute du plateau de jeu ---------------------------------------
 .topSection {
-  z-index:2;
-  position:relative;
-  top:0.95%;
- width: 100%;
-  height:100%;
+  z-index: 2;
+  position: relative;
+  top: 0.95%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 }
 .oneToEight {
-display:flex;
-  background-color: v.$cases-and-backHouse-color;
+  display: flex;
+
   .gridSectionA {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    
+        justify-content: end;
+        align-items: end;
   }
-  
 }
 .nineToSixteen {
-  background-color: v.$cases-and-backHouse-color;
   .gridSectionB {
     display: flex;
     flex-direction: column-reverse;
+    align-items: start;
   }
 }
 .yellowHouse {
-  background-color: v.$yellowsSegments-color;
   .gridSectionB {
     display: flex;
     flex-direction: column;
+    justify-content: start;
   }
 }
 .eighteenTo25 {
-  background-color: v.$cases-and-backHouse-color;
   .gridSectionB {
     display: flex;
     flex-direction: column;
+    align-items: end;
   }
 }
 .twentySixTo33 {
-  background-color: v.$cases-and-backHouse-color;
   .gridSectionA {
     display: flex;
     flex-direction: row-reverse;
+    align-items: end;
   }
 }
 //------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------partie centrale----------------------------------------------------------
 .middleSection {
- width: 100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.middleLeft{
-  
-  z-index:2;
-  position:relative;
- right:12.9%;
-.greenHouse {
-  position:relative;
-  background-color: v.$greensSegments-color;
-  .gridSectionA {
-    display: flex;
-    flex-direction: row;
+.middleLeft {
+  z-index: 2;
+  position: relative;
+  right: 12.9%;
+  .greenHouse {
+    position: relative;
+
+    .gridSectionA {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
-}
-.middleRight{
-    z-index:2;
-  position:relative;
-left:12.9%;
+.middleRight {
+  z-index: 2;
+  position: relative;
+  left: 12.9%;
 
-.blueHouse {
-  background-color: v.$bluesSegments-color;
-  .gridSectionA {
-    display: flex;
-    flex-direction: row-reverse;
-    
+  .blueHouse {
+    .gridSectionA {
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
-
-}
 }
 //-------------------------------------------------------------------------------------------------------------------
 
 //-------------------------------------------partie basse du plateau -----------------------------------------------
 .bottomSection {
-  position:relative;
-  bottom:0.95%;
+  position: relative;
+  bottom: 0.95%;
   width: 100%;
-  height:100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -130,7 +125,6 @@ left:12.9%;
 }
 
 .thirtyFiveTo42 {
-  background-color: v.$cases-and-backHouse-color;
   .gridSectionA {
     display: flex;
     flex-direction: row;
@@ -138,23 +132,22 @@ left:12.9%;
 }
 
 .fourtyThreeTo50 {
-  background-color: v.$cases-and-backHouse-color;
   .gridSectionB {
     display: flex;
     flex-direction: column;
+    align-items: end;
   }
 }
 
 .redHouse {
-  background-color:v.$redsSegments-color;
   .gridSectionB {
     display: flex;
     flex-direction: column-reverse;
-  }
+    justify-content: start;
+   }
 }
 
 .fiftyTwoTo59 {
-  background-color: v.$cases-and-backHouse-color;
   .gridSectionB {
     display: flex;
     flex-direction: column-reverse;
@@ -162,109 +155,153 @@ left:12.9%;
 }
 
 .sixtyTo67 {
-  background-color: v.$cases-and-backHouse-color;
-  
   .gridSectionA {
     display: flex;
     flex-direction: row;
-    
-   
+    justify-content: end;
   }
 }
-
 
 // Classe pour les cases plus hautes que larges
 .gridCaseVertical {
   width: 50px;
-  height: 97px; /* Plus haute que large */
-    border: 1px solid v.$text-color;
+  height: 98px; /* Plus haute que large */
+  border: 1px solid v.$text-color;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 // Classe pour les cases plus larges que hautes
 .gridCaseHorizontal {
-  width: 97px; /* Plus large que haute */
+  width: 98px; /* Plus large que haute */
   height: 50px;
   border: 1px solid v.$text-color;
   display: flex;
   justify-content: center;
-  align-items: center;}
-
-
-
-
-.caseSecurity2,
-.caseSecurity3,
-.caseSecurity4,
-.caseSecurity5,
-.caseSecurity6,
-.caseSecurity7,
-.caseSecurity8,
-.caseSecurity9,
-.caseSecurity10 {
- 
-  background-color: v.$text-color; /* Exemple de couleur de sécurité */
+  align-items: center;
 }
 
-.sortieMaisonJaune {
-  background-color: v.$yellowsSegments-color;
-}
-
-.sortieMaisonRouge {
-  background-color: v.$redsSegments-color
-}
-
-.middleSquare{
- position:absolute;
-  width:300px;
-  height:300px;
-  background-color: v.$cases-and-backHouse-color;
-   border: 1px solid v.$text-color;
+.middleSquare {
+  position: absolute;
+  width: 302px;
+  height: 302px;
+background-color: v.$cases-and-backHouse-color;
+  border: 1px solid v.$text-color;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:50px;
+  padding: 50px;
+    &__InnerSquare{
+      z-index: 1;
+ width: 0px;
+  height: 0px;
+  border-top: 150.5px solid v.$yellowsSegments-color;
+  border-bottom: 150px solid v.$redsSegments-color;
+  border-left: 150.5px solid v.$greensSegments-color;
+  border-right: 150.5px solid v.$bluesSegments-color;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+}
+
+.mainRedHouse {
+  border: 1px solid v.$text-color;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 405px;
+  height: 405px;
+  background-color: v.$cases-and-backHouse-color;
+
+  &__centerSquare{
+    border: 1px solid v.$text-color;
+  position: relative;
+bottom:-6.5%;
+ left:6.5%;
+   width: 350px;
+  height: 350px;
+  background-color: v.$redsSegments-color;
+  }
+}
+.mainBlueHouse {
+  background-color: v.$cases-and-backHouse-color;
+  border: 1px solid v.$text-color;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 405px;
+  height: 405px;
+    &__centerSquare{
+    border: 1px solid v.$text-color;
+  position: relative;
+bottom:-6.5%;
+ left:6.5%;
+   width: 350px;
+  height: 350px;
+  background-color: v.$bluesSegments-color
+  }
+}
+.mainGreenHouse {
+  border: 1px solid v.$text-color;
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+background-color: v.$cases-and-backHouse-color;
+  width: 405px;
+  height: 405px;
+      &__centerSquare{
+    border: 1px solid v.$text-color;
+  position: relative;
+bottom:-6.5%;
+ left:6.5%;
+   width: 350px;
+  height: 350px;
+  background-color: v.$greensSegments-color;
+  }
+}
+.mainYellowHouse {
+  border: 1px solid v.$text-color;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+background-color: v.$cases-and-backHouse-color;
+  width: 405px;
+  height: 405px;
+      &__centerSquare{
+    border: 1px solid v.$text-color;
+  position: relative;
+bottom:-6.5%;
+ left:6.5%;
+   width: 350px;
+  height: 350px;
+  background-color: v.$yellowsSegments-color;
+  }
 }
 
 
-.mainRedHouse{
-   background-color: v.$cases-and-backHouse-color;
-      border: 1px solid v.$text-color;
-  position:absolute;
-  bottom:1%;
-  right:1%;
-  width:405px;
-  height:405px;
-}
-.mainBlueHouse{
-   background-color: v.$cases-and-backHouse-color;
-      border: 1px solid v.$text-color;
-  position:absolute;
- top:1%;
-  right:1%;
-   width:405px;
-  height:405px;
-}
-.mainGreenHouse{
-   background-color: v.$cases-and-backHouse-color;
-      border: 1px solid v.$text-color;
-  position:absolute;
- bottom:1%;
- left:1%;
+#ConnectLineA:after , #ConnectLineC:after{
+  z-index:5;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top right, transparent calc(50% - 1px), v.$text-color, transparent calc(50% + 1px));
+};
+#ConnectLineB:after, #ConnectLineD:after {
+    z-index:5;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top left, transparent calc(50% - 1px),  v.$text-color, transparent calc(50% + 1px));
 
-  width:405px;
-  height:405px;
 }
-.mainYellowHouse{
-   background-color: v.$cases-and-backHouse-color;
-      border: 1px solid v.$text-color;
-  position:absolute;
- top:1%;
- left:1%;
 
-  width:405px;
-  height:405px;
-}
