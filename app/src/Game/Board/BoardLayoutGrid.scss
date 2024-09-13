@@ -2,6 +2,7 @@
 
 #root {
   color: v.$text-color;
+ 
 }
 .Boardmap {
   background-color: v.$board-color;
@@ -12,8 +13,90 @@
   width: 1152px;
   height: 1152px;
   border: 2px solid v.$text-color;
-}
 
+  //-------------------------------------------------les quatre maisons -----------------------
+  .mainRedHouse {
+    border: 1px solid v.$text-color;
+    position: absolute;
+
+    bottom: 1%;
+    right: 1%;
+    width: 405px;
+    height: 405px;
+    background-color: v.$cases-and-backHouse-color;
+    &__centerSquare {
+      border: 1px solid v.$text-color;
+      position: relative;
+      bottom: -6.5%;
+      left: 6.5%;
+      width: 350px;
+      height: 350px;
+      background-color: v.$redsSegments-color;
+      &__innerColorSquare{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .mainBlueHouse {
+    background-color: v.$cases-and-backHouse-color;
+    border: 1px solid v.$text-color;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 405px;
+    height: 405px;
+    &__centerSquare {
+      border: 1px solid v.$text-color;
+      position: relative;
+      bottom: -6.5%;
+      left: 6.5%;
+      width: 350px;
+      height: 350px;
+      background-color: v.$bluesSegments-color;
+    }
+  }
+  .mainGreenHouse {
+    border: 1px solid v.$text-color;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    background-color: v.$cases-and-backHouse-color;
+    width: 405px;
+    height: 405px;
+    &__centerSquare {
+      border: 1px solid v.$text-color;
+      position: relative;
+      bottom: -6.5%;
+      left: 6.5%;
+      width: 350px;
+      height: 350px;
+      background-color: v.$greensSegments-color;
+    }
+  }
+  .mainYellowHouse {
+    border: 1px solid v.$text-color;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background-color: v.$cases-and-backHouse-color;
+    width: 405px;
+    height: 405px;
+    &__centerSquare {
+      border: 1px solid v.$text-color;
+      position: relative;
+      bottom: -6.5%;
+      left: 6.5%;
+      width: 350px;
+      height: 350px;
+      background-color: v.$yellowsSegments-color;
+    }
+  }
+}
 .gridBody {
   width: 100%;
   height: 100%;
@@ -37,13 +120,12 @@
 }
 .oneToEight {
   display: flex;
-
   .gridSectionA {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-        justify-content: end;
-        align-items: end;
+    justify-content: end;
+    align-items: end;
   }
 }
 .nineToSixteen {
@@ -71,6 +153,7 @@
   .gridSectionA {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: start;
     align-items: end;
   }
 }
@@ -91,7 +174,6 @@
   right: 12.9%;
   .greenHouse {
     position: relative;
-
     .gridSectionA {
       display: flex;
       flex-direction: row;
@@ -102,7 +184,6 @@
   z-index: 2;
   position: relative;
   left: 12.9%;
-
   .blueHouse {
     .gridSectionA {
       display: flex;
@@ -123,14 +204,12 @@
   justify-content: center;
   align-items: center;
 }
-
 .thirtyFiveTo42 {
   .gridSectionA {
     display: flex;
     flex-direction: row;
   }
 }
-
 .fourtyThreeTo50 {
   .gridSectionB {
     display: flex;
@@ -138,22 +217,18 @@
     align-items: end;
   }
 }
-
 .redHouse {
   .gridSectionB {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: start;
-   }
+  }
 }
-
 .fiftyTwoTo59 {
   .gridSectionB {
     display: flex;
     flex-direction: column-reverse;
   }
 }
-
 .sixtyTo67 {
   .gridSectionA {
     display: flex;
@@ -170,6 +245,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: v.$cases-and-backHouse-color;
 }
 
 // Classe pour les cases plus larges que hautes
@@ -180,111 +256,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: v.$cases-and-backHouse-color;
 }
 
 .middleSquare {
   position: absolute;
   width: 302px;
   height: 302px;
-background-color: v.$cases-and-backHouse-color;
+  background-color: v.$cases-and-backHouse-color;
   border: 1px solid v.$text-color;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px;
-    &__InnerSquare{
-      z-index: 1;
- width: 0px;
-  height: 0px;
-  border-top: 150.5px solid v.$yellowsSegments-color;
-  border-bottom: 150px solid v.$redsSegments-color;
-  border-left: 150.5px solid v.$greensSegments-color;
-  border-right: 150.5px solid v.$bluesSegments-color;
-    position:relative;
-    display:flex;
+  &__InnerSquare {
+    z-index: 1;
+    width: 0px;
+    height: 0px;
+
+    border-top: 150.5px solid v.$yellowsSegments-color;
+    border-bottom: 150px solid v.$redsSegments-color;
+    border-left: 150.5px solid v.$greensSegments-color;
+    border-right: 150.5px solid v.$bluesSegments-color;
+    position: relative;
+    display: flex;
     flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.mainRedHouse {
-  border: 1px solid v.$text-color;
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
-  width: 405px;
-  height: 405px;
-  background-color: v.$cases-and-backHouse-color;
-
-  &__centerSquare{
-    border: 1px solid v.$text-color;
-  position: relative;
-bottom:-6.5%;
- left:6.5%;
-   width: 350px;
-  height: 350px;
-  background-color: v.$redsSegments-color;
-  }
-}
-.mainBlueHouse {
-  background-color: v.$cases-and-backHouse-color;
-  border: 1px solid v.$text-color;
-  position: absolute;
-  top: 1%;
-  right: 1%;
-  width: 405px;
-  height: 405px;
-    &__centerSquare{
-    border: 1px solid v.$text-color;
-  position: relative;
-bottom:-6.5%;
- left:6.5%;
-   width: 350px;
-  height: 350px;
-  background-color: v.$bluesSegments-color
-  }
-}
-.mainGreenHouse {
-  border: 1px solid v.$text-color;
-  position: absolute;
-  bottom: 1%;
-  left: 1%;
-background-color: v.$cases-and-backHouse-color;
-  width: 405px;
-  height: 405px;
-      &__centerSquare{
-    border: 1px solid v.$text-color;
-  position: relative;
-bottom:-6.5%;
- left:6.5%;
-   width: 350px;
-  height: 350px;
-  background-color: v.$greensSegments-color;
-  }
-}
-.mainYellowHouse {
-  border: 1px solid v.$text-color;
-  position: absolute;
-  top: 1%;
-  left: 1%;
-background-color: v.$cases-and-backHouse-color;
-  width: 405px;
-  height: 405px;
-      &__centerSquare{
-    border: 1px solid v.$text-color;
-  position: relative;
-bottom:-6.5%;
- left:6.5%;
-   width: 350px;
-  height: 350px;
-  background-color: v.$yellowsSegments-color;
-  }
-}
-
-
-#ConnectLineA:after , #ConnectLineC:after{
-  z-index:5;
+//----------------------------------------------------------croix diiagonale au centre ---------------------------------
+#ConnectLineA:after,
+#ConnectLineC:after {
+  z-index: 5;
   content: "";
   width: 100%;
   height: 100%;
@@ -292,16 +297,106 @@ bottom:-6.5%;
   top: 0;
   left: 0;
   background: linear-gradient(to top right, transparent calc(50% - 1px), v.$text-color, transparent calc(50% + 1px));
-};
-#ConnectLineB:after, #ConnectLineD:after {
-    z-index:5;
+}
+#ConnectLineB:after,
+#ConnectLineD:after {
+  z-index: 5;
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to top left, transparent calc(50% - 1px),  v.$text-color, transparent calc(50% + 1px));
-
+  background: linear-gradient(to top left, transparent calc(50% - 1px), v.$text-color, transparent calc(50% + 1px));
 }
 
+//-----------------------------------------
+
+/* Exemple de classes pour les cases */
+
+#Secu1,
+#blueHouse1,
+#blueHouse2,
+#blueHouse3,
+#blueHouse4,
+#blueHouse5,
+#blueHouse6,
+#blueHouse7 {
+  background-color: #1168d8;
+}
+
+#Secu2,
+#Secu3,
+#Secu4,
+#Secu5,
+#Secu7,
+#Secu8,
+#Secu9,
+#Secu10 {
+  background-color: #1e1e24;
+}
+
+#yellowHouse1,
+#yellowHouse2,
+#yellowHouse3,
+#yellowHouse4,
+#yellowHouse5,
+#yellowHouse6,
+#yellowHouse7,
+#ExitJaune {
+  background-color: #ffe600;
+}
+
+#greenHouse1,
+#greenHouse2,
+#greenHouse3,
+#greenHouse4,
+#greenHouse5,
+#greenHouse6,
+#greenHouse7,
+#Secu6 {
+  background-color: #088112;
+  border-width: 1px 1px 1px 1px;
+}
+
+#redHouse1,
+#redHouse2,
+#redHouse3,
+#redHouse4,
+#redHouse5,
+#redHouse6,
+#redHouse7,
+#ExitRouge {
+  background-color: #ce1e1e;
+}
+#redHouse7 {
+  border-width: 1px 1px 1px 1px;
+}
+
+/* Ajoutez des styles spécifiques pour certaines bordures */
+#c8,
+#c9 {
+  border-width: 0px 0px 1px 1px;
+}
+#redHouse6,
+#yellowHouse7 {
+  border-width: 0px 1px 1px 1px;
+}
+
+#c25,
+#c26,
+#c59,
+#c60 {
+  border-width: 1px 0px 0px 1px;
+}
+
+#c42,
+#c43 {
+  border-width: 1px 1px 0px 0px;
+}
+
+#pito1,
+#pito2 {
+  border: none;
+  background: none;
+}

@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-  firstColor: "#087d00", //voir ici pour utiliser sass a la place des Hex-code en dur
-  secondColor: "#c40000",
-  thirdColor: "#ffc700",
-  fourthColor: "#0047c4",
+  firstColor: "beige", //voir ici pour utiliser sass a la place des Hex-code en dur
+  secondColor: "burlywood",
+  thirdColor: "burlywood",
+  fourthColor: "beige",
   direction: "105deg",
   backgroundSize: "400% 400%",
   animation: "gradient 15s ease infinite",

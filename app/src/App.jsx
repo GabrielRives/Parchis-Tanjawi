@@ -1,39 +1,47 @@
 //import { useState } from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.scss'
 //import Dice from "./Game/Dice/Dice"
-import Board from "./Game/Board/Board"
-import BoardGrid from "./Game/Board/BoardLayougrid"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Gradient from "../src/Components/AnimatedBackground/Gradient"
+import BoardLayout from "./Game/Board/BoardLayougrid"
 import Home from './Home/Home'
 import Rules from "./Components/RulesPage/RulesPage";
 import Ranking from './Components/RankingPage/RankingPage';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
-import Dice from "./Game/Dice/Dice"
+import Dice from "./Game/Dice/Dice";
+import BoardTest from "./Game/Board/Board";
+import TesGamePlay from "./Game/TestGameplay";
 
 
 
 function App() {
-  //const [count, setCount] = useState(0)
-
-    const router = createBrowserRouter([
-      { path: "*", element: <PageNotFound /> },
-      { path: "/", element: <Home /> },
-      { path: "/board", element: <Board /> },
-      { path: "/rules", element: <Rules /> },
-      { path: "/ranking", element: <Ranking /> },
-      {path:"/gridDev", element:<BoardGrid/>},
-      {path:"/dice", element:<Dice/>}
-    ]);
-    return (
-      <>
-       
-        <RouterProvider router={router} />
-      </>
-    );
-
   
+   const AnimatedRoutes = () => {
+    const location = useLocation();
 
-
+    return (
+      <div>
+        <Routes location={location}>
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/rules" element={<Rules />} />
+          <Route path="/ranking" element={<Ranking />} />
+          <Route path="/boardLayout" element={<BoardLayout />} />
+          <Route path="/dice" element={<Dice />} />
+          <Route path="/test" element={<BoardTest />} />
+        </Routes>
+      </div>
+    );
+    }
+return (
+  <BrowserRouter>
+    <Gradient />
+    <div className="gameBoard">
+      <AnimatedRoutes />
+      <TesGamePlay/>
+    </div>
+  </BrowserRouter>
+);
 
 }
 

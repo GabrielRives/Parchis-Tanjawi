@@ -1,35 +1,34 @@
+// Dice.jsx
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import ReactDice from "react-dice-complete";
 
-function Dice() {
-  const reactDice = useRef(null);
-  const [isPositionedAt, setIsPositionedAt] = useState(0);
-
-  // Reset the position on page refresh using localStorage
-  useEffect(() => {
-    // Clear the localStorage or reset the value to 0 when the page is loaded or refreshed
-    localStorage.setItem("dicePosition", 0);
-    setIsPositionedAt(0); // Also reset the state
-  }, []);
+function Dice({ onRoll }) {
+  const [position, setPosition] = useState(0);
+  const [hasRolled, setHasRolled] = useState(false); // Nouvel état pour vérifier si le dé a été roulé
 
   const rollDone = (totalValue) => {
-    setIsPositionedAt((prevPosition) => {
-      const newPosition = prevPosition + totalValue;
-      console.log("Updated position:", newPosition);
+    // Mettre à jour hasRolled pour indiquer que le dé a été roulé
+    setHasRolled(true);
 
-      // Store the new position in localStorage
-      localStorage.setItem("dicePosition", newPosition);
-
-      return newPosition;
-    });
+    if (hasRolled) {
+      setPosition((prevPosition) => {
+        const newPosition = prevPosition + totalValue;
+        // Appelle la fonction de rappel avec la nouvelle position
+        if (onRoll) onRoll(newPosition);
+        return newPosition;
+      });
+    } else {
+      // Position reste inchangée si le dé n'a pas encore été roulé
+      if (onRoll) onRoll(position); // Appelle la fonction de rappel avec la position actuelle (0 si pas encore roulé)
+    }
   };
 
   return (
     <div className="dice">
       <ReactDice
         numDice={1}
-        ref={reactDice}
         rollDone={rollDone}
         dotColor="black"
         faceColor="beige"
@@ -38,9 +37,13 @@ function Dice() {
         outline
         rollTime={1}
       />
-      <p>Current Position: {isPositionedAt}</p>
+      <p>Current Position: {position}</p>
     </div>
   );
 }
+
+Dice.propTypes = {
+  onRoll: PropTypes.func,
+};
 
 export default Dice;
