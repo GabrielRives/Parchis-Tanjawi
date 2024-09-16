@@ -7,7 +7,7 @@ export default function FichaRed1() {
   return (
     <div className="fichared1">
       {/* Affichage du pion */}
-      <div className="pion">🔴</div>
+      
     </div>
   );
 }

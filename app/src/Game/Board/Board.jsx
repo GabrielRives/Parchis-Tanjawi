@@ -2,9 +2,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types"; // Importation de PropTypes
 import { MapInteractionCSS } from "react-map-interaction";
-import BoardLayout from "./BoardLayougrid";
-import "./Board.scss";
 
+import BoardReworked from "./Boardreworked";
+import "./Board.scss";
+import Gameplay from "../TestGameplay.jsx";
 
 class Controlled extends Component {
   constructor(props) {
@@ -14,11 +15,12 @@ class Controlled extends Component {
         scale: 0.735,
         translation: { x: 0, y: 0 },
       },
+      initialScale: 0.735, // Pour garder la valeur initiale du zoom
     };
   }
 
   handleRecenter = () => {
-    // Remet la translation à (0,0) et le scale à 1
+    // Remet la translation à (0,0) et le scale à 0.735
     this.setState({
       value: {
         scale: 0.735,
@@ -27,22 +29,50 @@ class Controlled extends Component {
     });
   };
 
+  handlePanZoomChange = (value) => {
+    const { scale, translation } = value;
+
+    // Si le zoom est à la valeur initiale, limiter le pan à 200px
+    if (scale === this.state.initialScale) {
+      const limitedTranslation = {
+        x: Math.max(-200, Math.min(200, translation.x)), // Limiter entre -200 et 200px en X
+        y: Math.max(-200, Math.min(200, translation.y)), // Limiter entre -200 et 200px en Y
+      };
+
+      // Mettre à jour l'état avec la translation limitée
+      this.setState({
+        value: {
+          scale: scale,
+          translation: limitedTranslation,
+        },
+      });
+    } else {
+      // Sinon, autoriser le pan libre sans restriction
+      this.setState({
+        value: value,
+      });
+    }
+  };
+
+  
   render() {
     return (
-      <div className="Board">
-       
+      <div className="visualPage">
+        <div className="Board">
           <MapInteractionCSS
             value={this.state.value}
-            onChange={(value) => this.setState({ value })}
+            onChange={this.handlePanZoomChange}
             minScale={0.735} // Limite de dézoom à 0.735
             maxScale={this.props.maxScale}
           >
-            <BoardLayout className="importedBoard" />
+            <BoardReworked />
           </MapInteractionCSS>
-          <button onClick={this.handleRecenter} style={{ position: "absolute", top: 10, right: 10 }}>
-            Recenter
-          </button>
-           </div>
+        </div>
+        <div className="controlSection">
+          <button onClick={this.handleRecenter}>Recenter</button>
+          <Gameplay  />
+        </div>
+      </div>
     );
   }
 }

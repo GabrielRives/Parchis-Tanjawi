@@ -3,6 +3,7 @@ import React from "react";
 import "./BoardLayoutGrid.scss";
 import { cases } from "../Data/dataCases";
 
+
 function Board() {
   // Function to render a section of the board with specific range of case numbers and orientation
   console.log(cases);

@@ -1,0 +1,400 @@
+@use "src/styles/Variables.scss" as v;
+
+.alterBoard {
+  width: 1160px;
+  height: 1160px;
+  background-image: url("../../assets/Parchis.png");
+  background-size: 100%;
+  background-position: center;
+}
+//--------------------------------------------------------------les 4 maisons de départ------------------------------
+.houseYellow,
+.houseRed,
+.houseBlue,
+.houseGreen {
+  width: 372px;
+  height: 372px;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+//---------------------------------------------les cases 1 à 68---------------------------------------------------------------------
+
+.verticalCase {
+  width: 50px;
+  height: 123px;
+ // background-color: rgba(187, 59, 114, 0.603);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontalCase {
+  width: 123px;
+  height: 50px;
+ // background-color: rgba(187, 59, 185, 0.603);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+//--------------de 1 à 8 et 26 à 33
+#case_1 {
+  left: 94.2%;
+  top: -95.7%;
+}
+#case_2 {
+  left: 89.6%;
+  top: -106.3%;
+}
+#case_3 {
+  left: 84.86%;
+  top: -116.9%;
+}
+#case_4 {
+  left: 80.12%;
+  top: -127.5%;
+}
+#case_5 {
+  left: 75.45%;
+  top: -138.1%;
+}
+#case_6 {
+  left: 70.74%;
+  top: -148.7%;
+}
+#case_7 {
+  left: 66.2%;
+  top: -159.3%;
+}
+#case_8 {
+  left: 61.6%;
+  top: -169.9%;
+}
+#case_26 {
+  left: 34.05%;
+  top: -253.8%;
+}
+#case_27 {
+  left: 29.5%;
+  top: -264.4%;
+}
+#case_28 {
+  left: 24.96%;
+  top: -275%;
+}
+#case_29 {
+  left: 20.3%;
+  top: -285.6%;
+}
+#case_30 {
+  left: 15.55%;
+  top: -296.2%;
+}
+#case_31 {
+  left: 10.9%;
+  top: -306.8%;
+}
+#case_32 {
+  left: 6.15%;
+  top: -317.4%;
+}
+#case_33 {
+  left: 1.5%;
+  top: -328%;
+}
+
+//--------------de 35 à 42 et 60 à 67
+#case_35 {
+  left: 1.5%;
+  top: -327.7%;
+}
+#case_36 {
+  left: 6.16%;
+  top: -338.3%;
+}
+#case_37 {
+  left: 10.8%;
+  top: -348.9%;
+}
+#case_38 {
+  left: 15.4%;
+  top: -359.5%;
+}
+#case_39 {
+  left: 20.3%;
+  top: -370.1%;
+}
+#case_40 {
+  left: 25%;
+  top: -380.7%;
+}
+#case_41 {
+  left: 29.6%;
+  top: -391.3%;
+}
+#case_42 {
+  left: 34.05%;
+  top: -401.9%;
+}
+#case_60 {
+  left: 61.6%;
+  top: -485.9%;
+}
+#case_61 {
+  left: 66.2%;
+  top: -496.5%;
+}
+#case_62 {
+  left: 70.8%;
+  top: -507.1%;
+}
+#case_63 {
+  left: 75.4%;
+  top: -517.7%;
+}
+#case_64 {
+  left: 80.1%;
+  top: -528.3%;
+}
+#case_65 {
+  left: 84.8%;
+  top: -538.9%;
+}
+#case_66 {
+ left: 89.55%;
+  top: -549.5%;
+}
+#case_67 {
+  left:94.15%;
+  top: -560.1%;
+}
+//---------case 35 et 68-------
+#case_34 {
+  left: 1.55%;
+    top: -327.9%;
+
+}
+#case_68 {
+  left: 94.1%;
+  top: -581.42%;
+
+}
+
+//--------case 17 et 51------------
+#case_17{
+     left: 44.7%;
+    top: -247.4%;
+}
+#case_51{
+     left: 44.7%;
+    top: -408.4%;
+}
+
+//---------------cases 9 à 16 et 18 à 25-----------------
+#case_9 {
+  left: 55.5%;
+  top: -180.5%;
+}
+#case_10 {
+  left: 55.5%;
+  top: -189.3%;
+}
+#case_11 {
+  left: 55.5%;
+  top: -198.1%;
+}
+#case_12 {
+  left: 55.5%;
+  top: -207.1%;
+}
+#case_13 {
+  left: 55.5%;
+  top: -216.2%;
+}
+#case_14 {
+  left: 55.5%;
+  top: -225.2%;
+}
+#case_15 {
+  left: 55.5%;
+  top: -234.2%;
+}
+#case_16 {
+  left: 55.5%;
+  top: -243.1%;
+}
+#case_18 {
+  left: 34%;
+  top: -251.7%;
+}
+#case_19 {
+  left: 34%;
+  top: -251.5%;
+}
+#case_20 {
+  left: 34%;
+  top: -251.05%;
+}
+#case_21 {
+  left: 34%;
+  top: -250.7%;
+}
+#case_22 {
+  left: 34%;
+  top: -250.3%;
+}
+#case_23 {
+  left: 34%;
+  top: -249.8%;
+}
+#case_24 {
+  left: 34%;
+  top: -249.6%;
+}
+#case_25 {
+  left: 34%;
+  top: -249.5%;
+}
+
+//------------------cases de 43 à 50 et 52 à 59-----------
+#case_43 {
+  left: 34%;
+  top: -406.3%;
+}
+#case_44 {
+  left: 34%;
+  top: -406.2%;
+}
+#case_45 {
+  left: 34%;
+  top: -405.95%;
+}
+#case_46 {
+  left: 34%;
+  top: -405.5%;
+}
+#case_47 {
+  left: 34%;
+  top: -405.1%;
+}
+#case_48 {
+  left: 34%;
+  top: -404.7%;
+}
+#case_49 {
+  left: 34%;
+  top: -404.3%;
+}
+#case_50 {
+  left: 34%;
+  top: -404.05%;
+}
+#case_52 {
+  left: 55.45%;
+  top: -412.7%;
+}
+#case_53 {
+  left: 55.45%;
+  top: -421.55%;
+}
+#case_54 {
+  left: 55.45%;
+  top: -430.6%;
+}
+#case_55 {
+  left: 55.45%;
+  top: -439.6%;
+}
+#case_56 {
+  left: 55.45%;
+  top: -448.6%;
+}
+#case_57 {
+  left: 55.45%;
+  top: -457.7%;
+}
+#case_58 {
+  left: 55.45%;
+  top: -466.5%;
+}
+#case_59 {
+  left: 55.45%;
+  top: -475.3%;
+}
+
+//-----colonne yellow_1 à yellow_8-----------------------
+#yellow_1{
+     left: 44.65%;
+  top: -630.6%;
+}
+#yellow_2{
+     left: 44.65%;
+  top: -630.2%;
+}
+#yellow_3{
+     left: 44.65%;
+  top: -629.8%;
+}
+#yellow_4{
+     left: 44.65%;
+  top: -629.4%;
+}
+#yellow_5{
+     left: 44.65%;
+  top: -629%;
+}
+#yellow_6{
+     left: 44.65%;
+  top: -628.7%;
+}
+#yellow_7{
+     left: 44.65%;
+  top: -628.3%;
+}
+#yellow_8{
+     left: 44.65%;
+  top: -623%;
+}
+
+//--------colonne red_1 à red_8-------------
+#red_1{
+     left: 44.65%;
+  top: -581.6%;
+}
+#red_2{
+     left: 44.65%;
+  top: -590.7%;
+}
+#red_3{
+     left: 44.65%;
+  top: -599.7%;
+}
+#red_4{
+     left: 44.65%;
+  top: -608.7%;
+}
+#red_5{
+     left: 44.65%;
+  top: -617.75%;
+}
+#red_6{
+     left: 44.65%;
+  top: -626.55%;
+}
+#red_7{
+     left: 44.65%;
+  top: -635.65%;
+}
+#red_8{
+     left: 44.65%;
+  top: -649.7%;
+}
+

@@ -11,7 +11,7 @@ import Gradient from "./Components/AnimatedBackground/Gradient.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
+    <Gradient />
     <App />
-    
   </Provider>
 );

@@ -1,9 +1,13 @@
+@use "src/styles/Variables.scss" as v;
+
 .fichared1 {
   position: absolute; /* ou relative selon le contexte */
   /* Ajuste la position en fonction du placement du composant dans le board */
+  background-color: crimson;
+  width: 40px;
+  height:40px;
+  border-radius: 50%;
+  border: 1px solid v.$text-color;
 }
 
-.pion {
-  font-size: 24px; /* Ajuste la taille du pion */
-  /* Autres styles pour le pion */
-}
+

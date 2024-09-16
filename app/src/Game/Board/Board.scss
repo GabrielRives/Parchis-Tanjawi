@@ -1,3 +1,5 @@
+@use "src/styles/Variables.scss" as v;
+
 .Board{
  
     width:850px;
@@ -9,10 +11,35 @@
     background-size: 100%;
     background-position: center;
     padding:1em;
+    margin-left:20em;
 }
 
-.importedBoard{
-     width:850px;
-    height:850px;
+
+.visualPage{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    gap:2em;
+    padding-left:2em;
+}
+
+.controlSection{
+    width:20%;
+    height:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+button{
+    margin-top:1em;
+    width:10em;
+    height:4em;
+    background-color: cadetblue;
+  
 }
 
